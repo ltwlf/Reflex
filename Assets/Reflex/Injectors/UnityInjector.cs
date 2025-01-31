@@ -11,10 +11,10 @@ using UnityEngine.Scripting;
 
 namespace Reflex.Injectors
 {
-    internal static class UnityInjector
+    public static class UnityInjector
     {
         internal static Action<Scene, SceneScope> OnSceneLoaded;
-        internal static Container ProjectContainer { get; private set; }
+        public static Container ProjectContainer { get; private set; }
         internal static Dictionary<Scene, Container> ContainersPerScene { get; } = new();
         internal static Dictionary<Scene, Container> SceneContainerParentOverride { get; } = new();
         internal static Dictionary<Scene, Action<ContainerBuilder>> ScenePreInstaller { get; } = new();
